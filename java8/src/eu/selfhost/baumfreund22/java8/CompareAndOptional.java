@@ -34,6 +34,7 @@ public class CompareAndOptional {
 		}
 		
 //		Für primitive Typen existierten die Optional: OptionalInt, OptionalLong, OptionalDouble
+//		test
 
 		
 	}
