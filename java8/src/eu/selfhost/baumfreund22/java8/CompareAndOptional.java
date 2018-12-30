@@ -4,6 +4,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import eu.selfhost.baumfreund22.java8.objects.Person;
 
@@ -32,6 +34,7 @@ public class CompareAndOptional {
 		}
 		
 //		Für primitive Typen existierten die Optional: OptionalInt, OptionalLong, OptionalDouble
+
 		
 	}
 
