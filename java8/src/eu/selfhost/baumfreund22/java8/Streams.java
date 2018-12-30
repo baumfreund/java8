@@ -68,7 +68,7 @@ public class Streams {
 		Stream<Integer> intStream = Stream.of(1,2,40,60,100,200);
 		
 		intStream.filter(e -> e > 40).collect(Collectors.toList()).forEach(e -> System.out.println("Zahl: "+e));
-		stringStream.forEach(e -> System.out.println(e));
+//		stringStream.forEach(e -> System.out.println(e));
 		
 //		Verwendung von IntStream
 		IntStream range = IntStream.range(0, 100);
@@ -86,7 +86,9 @@ public class Streams {
 //		range macht vermutlich bei Double keinen sinn
 		DoubleStream doubleStream = DoubleStream.of(10.4, 3.2, 6.5);
 		
-		
+//		Namen als komma getrennten String
+		String kommanames = stringStream.sorted().collect(Collectors.joining(","));
+		System.out.println(kommanames);
 		
 //		Unendliche Streams
 		IntStream iterStream = IntStream.iterate(0, e -> e +1);
@@ -110,7 +112,7 @@ public class Streams {
 
 	
 
-	private static List<Person> createPersonen() {
+	public static List<Person> createPersonen() {
 		LinkedList<Person> liste = new LinkedList<Person>();
 		liste.add(new Person("Tom", 37, "m"));
 		liste.add(new Person("Kerstin", 16, "w"));
