@@ -28,13 +28,23 @@ public class CompareAndOptional {
 			System.out.println("Es gibt Tom!");
 		}
 		
+//		Keine Prüfung mehr auf null erforderlich mit Optional - Reduzierung von NPE, da Optional behandelt werden müssen
+//		NullObject-Pattern dadurch zumindest teilweise nicht mehr erforderlich
 		Optional<Person> hugo = findPerson("Hugo");
-		if(hugo.isPresent() == false) {
-			System.out.println("Hugo existiert nicht!");
+		if(hugo.isPresent()) {
+			System.out.println("Hugo ist "+hugo.get().getAge()+" Jahre alt.");
+		} else {
+			System.out.println("Hugo wurde nicht gefunden");
 		}
 		
+		
+		
+//		hugo.orElse(other)
+//		hugo.orElseGet(other)
+//		hugo.orElseThrow(exceptionSupplier)
+		
+		
 //		Für primitive Typen existierten die Optional: OptionalInt, OptionalLong, OptionalDouble
-//		test
 
 		
 	}
