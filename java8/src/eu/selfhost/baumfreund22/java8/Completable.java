@@ -19,7 +19,8 @@ public class Completable {
 		
 //		Aufruf des Suppliers
 		CompletableFuture<String> step1 = CompletableFuture.supplyAsync(longRunningAction);
-
+		System.out.println("test");
+		
 //		Anschlieﬂend den String des Suppliers konvertieren in Integer
 		Function<String,Integer> converter = Integer::parseInt;
 		CompletableFuture<Integer> step2 = step1.thenApply(converter);
